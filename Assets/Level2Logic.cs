@@ -20,7 +20,6 @@ public class Level2Logic : MonoBehaviour {
 	}
 
     public void resetLevel() {
-        Debug.Log(solutions);
         playerScript.forcePositionVector = new Vector3(-7.5f, -3f, 0f);
         playerScript.forcePosition = true;
 
