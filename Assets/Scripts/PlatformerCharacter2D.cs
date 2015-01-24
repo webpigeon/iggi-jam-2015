@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace UnitySampleAssets._2D
-{
 
     public class PlatformerCharacter2D : MonoBehaviour
     {
@@ -107,5 +105,5 @@ namespace UnitySampleAssets._2D
             set { doorKey = value; }
         }
 
-    }
+    
 }
