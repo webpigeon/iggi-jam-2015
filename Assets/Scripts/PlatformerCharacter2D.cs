@@ -8,7 +8,7 @@
         [SerializeField]
         private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
         [SerializeField]
-        private float jumpForce = 250f; // Amount of force added when the player jumps.	
+        private float jumpForce = 150f; // Amount of force added when the player jumps.	
 
         [Range(0, 1)]
         [SerializeField]
