@@ -11,6 +11,7 @@ public class Level1Logic : MonoBehaviour {
     public GameObject door;
     public GameObject goal;
     public GameObject player;
+    public GameObject[] triggerZones;
 
     public bool[] solutions = { false, false, false, false, false };
     private PlatformerCharacter2D playerScript;
@@ -24,9 +25,16 @@ public class Level1Logic : MonoBehaviour {
 	}
 
     public void resetLevel() {
-        player.transform.position.Set(-7.5f, -3f, 0f);
-        player.GetComponent<Rigidbody2D>().Sleep();
+        playerScript.forcePositionVector = new Vector3(-7.5f, -3f, 0f);
+        playerScript.forcePosition = true;
+
         playerScript.Key = false;
+
+        triggerZones[0].SetActive(!solutions[0]);
+        triggerZones[1].SetActive(solutions[0] && !solutions[1]);
+        triggerZones[2].SetActive(solutions[1] && !solutions[2]);
+        triggerZones[3].SetActive(!solutions[3]);
+        triggerZones[4].SetActive(!solutions[4]);
 
         wallShort.SetActive(solutions[0]);
         door.SetActive(solutions[0]);

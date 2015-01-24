@@ -35,6 +35,9 @@
         private float rangeX;
         private float rangeY;
 
+        public bool forcePosition = false;
+        public Vector3 forcePositionVector;
+
         private void Awake()
         {
             // Setting up references.
@@ -54,6 +57,13 @@
 
             // Set the vertical animation
             anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+
+            if (forcePosition) {
+                rigidbody2D.isKinematic = true;
+                rigidbody2D.transform.position = forcePositionVector;
+                rigidbody2D.isKinematic = false;
+                forcePosition = false;
+            }
         }
 
 
