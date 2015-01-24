@@ -12,13 +12,14 @@ public class MovingPlatform : MonoBehaviour {
 	private Vector3 leftPos;
 	private Vector3 rightPos;
 
+
 	// Use this for initialization
 	void Start () {
 		shouldMove = true;
 		startPos = transform.position;
 		leftPos = new Vector3 (startPos.x - displacement, startPos.y, 0);
 		rightPos = new Vector3 (startPos.x + displacement, startPos.y, 0);
-		target = leftPos;
+		target = rightPos;
 	}
 	
 	// Update is called once per frame
@@ -26,12 +27,13 @@ public class MovingPlatform : MonoBehaviour {
 		if (shouldMove) {
 			float speedDelta = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (transform.position, target, speedDelta);
-
 			float delta = Vector3.Distance (target, transform.position);
-			if (delta == 0) {
+			Debug.Log("delta="+delta);
+			if (delta <= 0.01) {
 				if (target == leftPos) {
 					target = rightPos;
 				} else {
+					Debug.Log("change to left");
 					target = leftPos;
 				}
 			}
