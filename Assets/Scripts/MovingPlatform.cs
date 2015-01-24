@@ -32,8 +32,6 @@ public class MovingPlatform : MonoBehaviour {
 				target = leftPos;
 			}
 		}
-	
-		Debug.Log (target);
 	}
 
 	void OnTriggerEnter2D (Collider2D col)
@@ -45,9 +43,10 @@ public class MovingPlatform : MonoBehaviour {
 		}
 	}
 
-	void onTriggerExit2D(Collider2D col)
+	void OnTriggerExit2D (Collider2D col)
 	{
-		if (col.gameObject.name == "CharacterRobotBoy") {
+		Debug.Log("I'm free!");
+		if (col.gameObject.name == "CharacterRobotBoy" && character != null) {
 			character.transform.parent = null;
 			character = null;
 		}
