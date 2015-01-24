@@ -250,7 +250,7 @@ MonoBehaviour:
   airControl: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 256
   doorKey: 0
   minX: -9
   maxX: 9
@@ -430,7 +430,7 @@ GameObject:
   - 4: {fileID: 172589309}
   - 212: {fileID: 172589311}
   - 61: {fileID: 172589310}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1977,7 +1977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: whatIsGround.m_Bits
-      value: 768
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_SortingLayerID
