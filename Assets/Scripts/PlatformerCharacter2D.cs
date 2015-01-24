@@ -58,8 +58,6 @@ namespace UnitySampleAssets._2D
             //only control the player if grounded or airControl is turned on
             if (grounded || airControl)
             {
-                // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move * crouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 anim.SetFloat("Speed", Mathf.Abs(move));
@@ -84,6 +82,11 @@ namespace UnitySampleAssets._2D
                 anim.SetBool("Ground", false);
                 rigidbody2D.AddForce(new Vector2(0f, jumpForce));
             }
+        }
+
+        public void AdjustMove(float move)
+        {
+            rigidbody2D.velocity = new Vector2(move, rigidbody2D.velocity.y);
         }
 
 
