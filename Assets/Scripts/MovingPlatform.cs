@@ -29,7 +29,7 @@ public class MovingPlatform : MonoBehaviour {
 		transform.Translate (currentUnits * Time.deltaTime, 0, 0);
 
 		if (character != null) {
-			character.AdjustMove(currentUnits * Time.deltaTime);
+			character.AdjustMove(currentUnits);
 		}
 	}
 

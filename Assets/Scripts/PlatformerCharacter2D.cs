@@ -27,6 +27,7 @@
         private float ceilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator anim; // Reference to the player's animator component.
         private bool doorKey = false;
+		private float movedByPlatform;
 
         private void Awake()
         {
@@ -61,7 +62,7 @@
                 anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+                rigidbody2D.velocity = new Vector2((move * maxSpeed) + movedByPlatform, rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !facingRight)
@@ -84,7 +85,8 @@
 
         public void AdjustMove(float move)
         {
-            rigidbody2D.velocity = new Vector2(move, rigidbody2D.velocity.y);
+			movedByPlatform = move;
+
         }
 
 
