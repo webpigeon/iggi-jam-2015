@@ -5,6 +5,7 @@ public class MovingPlatform : MonoBehaviour {
 	public float speed;
 	public float displacement;
 	public bool stopMoving;
+
 	private bool shouldMove;
 	private GameObject character;
 	private Vector3 target;
@@ -12,8 +13,6 @@ public class MovingPlatform : MonoBehaviour {
 	private Vector3 leftPos;
 	private Vector3 rightPos;
 
-
-	// Use this for initialization
 	void Start () {
 		shouldMove = true;
 		startPos = transform.position;
@@ -22,28 +21,24 @@ public class MovingPlatform : MonoBehaviour {
 		target = rightPos;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (shouldMove) {
 			float speedDelta = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (transform.position, target, speedDelta);
 			float delta = Vector3.Distance (target, transform.position);
-			Debug.Log("delta="+delta);
 			if (delta <= 0.01) {
 				if (target == leftPos) {
 					target = rightPos;
 				} else {
-					Debug.Log("change to left");
 					target = leftPos;
 				}
 			}
 		}
 	}
 
-	void OnTriggerEnter2D (Collider2D col)
-	{
-		if (col.gameObject.name == "CharacterRobotBoy") {
-			Debug.Log("Trigger was... er... triggered...");
+	void OnTriggerEnter2D (Collider2D col) {
+		if (col.gameObject.GetComponent<PlatformerCharacter2D>() != null) {
+			//Debug.Log("Trigger was... er... triggered...");
 			character = col.gameObject;
 			character.transform.parent = this.gameObject.transform;
 
@@ -53,10 +48,8 @@ public class MovingPlatform : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D (Collider2D col)
-	{
-		Debug.Log("I'm free!");
-		if (col.gameObject.name == "CharacterRobotBoy" && character != null) {
+	void OnTriggerExit2D (Collider2D col) {
+		if (col.gameObject.GetComponent<PlatformerCharacter2D>() != null) {
 			character.transform.parent = null;
 			character = null;
 

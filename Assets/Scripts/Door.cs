@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class Door : MonoBehaviour {
-    public BoxCollider2D[] colliders;
     public bool requiresKey = false;
+    private BoxCollider2D[] colliders;
 
 	void Start () {
         colliders = gameObject.GetComponents<BoxCollider2D>();
-
 	}
 
     void OnTriggerEnter2D(Collider2D collider) {
