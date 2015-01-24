@@ -32,5 +32,14 @@ public class Level2Logic : MonoBehaviour {
         wallLeft.SetActive(solutions[2]);
         wallRightFake.SetActive(solutions[1]);
         wallRightReal.SetActive(solutions[3]);
+
+		bool allComplete = true;
+		for (int i=0; i<solutions.Length; i++) {
+			allComplete = allComplete && solutions [i];
+		}
+		
+		if (allComplete) {
+			Application.LoadLevel ("Level3");
+		}
     }
 }
