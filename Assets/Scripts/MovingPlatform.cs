@@ -4,6 +4,8 @@ using System.Collections;
 public class MovingPlatform : MonoBehaviour {
 	public float speed;
 	public float displacement;
+	public bool stopMoving;
+	private bool shouldMove;
 	private GameObject character;
 	private Vector3 target;
 	private Vector3 startPos;
@@ -12,6 +14,7 @@ public class MovingPlatform : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		shouldMove = true;
 		startPos = transform.position;
 		leftPos = new Vector3 (startPos.x - displacement, startPos.y, 0);
 		rightPos = new Vector3 (startPos.x + displacement, startPos.y, 0);
@@ -20,16 +23,17 @@ public class MovingPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (shouldMove) {
+			float speedDelta = speed * Time.deltaTime;
+			transform.position = Vector3.MoveTowards (transform.position, target, speedDelta);
 
-		float speedDelta = speed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards (transform.position, target, speedDelta);
-
-		float delta = Vector3.Distance(target, transform.position);
-		if (delta == 0) {
-			if (target == leftPos) {
-				target = rightPos;
-			} else {
-				target = leftPos;
+			float delta = Vector3.Distance (target, transform.position);
+			if (delta == 0) {
+				if (target == leftPos) {
+					target = rightPos;
+				} else {
+					target = leftPos;
+				}
 			}
 		}
 	}
@@ -40,6 +44,10 @@ public class MovingPlatform : MonoBehaviour {
 			Debug.Log("Trigger was... er... triggered...");
 			character = col.gameObject;
 			character.transform.parent = this.gameObject.transform;
+
+			if (stopMoving) {
+				shouldMove = false;
+			}
 		}
 	}
 
@@ -49,6 +57,10 @@ public class MovingPlatform : MonoBehaviour {
 		if (col.gameObject.name == "CharacterRobotBoy" && character != null) {
 			character.transform.parent = null;
 			character = null;
+
+			if (stopMoving) {
+				shouldMove = true;
+			}
 		}
 	}
 }
