@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
     public BoxCollider2D[] colliders;
+    public bool requiresKey = false;
 
 	void Start () {
         colliders = gameObject.GetComponents<BoxCollider2D>();
@@ -11,12 +12,12 @@ public class Door : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider) {
         PlatformerCharacter2D player = collider.attachedRigidbody.gameObject.GetComponent<PlatformerCharacter2D>();
-        if (player != null && player.Key == true) {
+        if (player != null && (requiresKey == false || player.Key == true)) {
             foreach (BoxCollider2D col in colliders) {
-                Destroy(col);
+                col.enabled = false;
             }
             // TODO: We should also animate. Instead we just destroy the object to be lazy.
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
