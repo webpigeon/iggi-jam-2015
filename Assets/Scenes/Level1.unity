@@ -206,6 +206,8 @@ MonoBehaviour:
   maxX: 9
   minY: -5.30000019
   maxY: 5.30000019
+  forcePosition: 0
+  forcePositionVector: {x: 0, y: 0, z: 0}
 --- !u!50 &15732939
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -242,7 +244,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 2076485366}
   m_GameObject: {fileID: 15732935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
   m_CullingMode: 0
