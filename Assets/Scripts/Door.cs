@@ -15,7 +15,8 @@ public class Door : MonoBehaviour {
             foreach (BoxCollider2D col in colliders) {
                 Destroy(col);
             }
-            // TODO: We should also animate
+            // TODO: We should also animate. Instead we just destroy the object to be lazy.
+            Destroy(gameObject);
         }
     }
 }
