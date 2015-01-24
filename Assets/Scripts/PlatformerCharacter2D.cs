@@ -8,7 +8,7 @@ namespace UnitySampleAssets._2D
         private bool facingRight = true; // For determining which way the player is currently facing.
 
         [SerializeField] private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
-        [SerializeField] private float jumpForce = 400f; // Amount of force added when the player jumps.	
+        [SerializeField] private float jumpForce = 250f; // Amount of force added when the player jumps.	
 
         [Range(0, 1)] [SerializeField] private float crouchSpeed = .36f;
                                                      // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -22,7 +22,7 @@ namespace UnitySampleAssets._2D
         private Transform ceilingCheck; // A position marking where to check for ceilings
         private float ceilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator anim; // Reference to the player's animator component.
-
+		private boolean doorKey = false;
 
         private void Awake()
         {
@@ -101,5 +101,9 @@ namespace UnitySampleAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-    }
+
+		public Boolean Key{
+			get{ return true;}
+			set{ doorKey = value;}
+    	}
 }
