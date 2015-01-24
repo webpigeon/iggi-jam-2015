@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
   - 61: {fileID: 6100002}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200000}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.79999995, z: 0}
+  m_LocalPosition: {x: .0399999991, y: -2.77999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -68,8 +68,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .639999986, y: 2.51999998}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1.11864507, y: 2.66567469}
+  m_Center: {x: -.0936479419, y: -1.21742392}
 --- !u!61 &6100002
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -79,8 +79,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .219999999, y: 2.51999998}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: .615402699, y: 2.68648577}
+  m_Center: {x: -.0728372931, y: -1.20701838}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
