@@ -28,6 +28,13 @@
         private Animator anim; // Reference to the player's animator component.
         public bool doorKey = false;
 
+        public float minX = -9;
+        public float maxX =  9;
+        public float minY = -5.3f;
+        public float maxY =  5.3f;
+        private float rangeX;
+        private float rangeY;
+
         private void Awake()
         {
             // Setting up references.
@@ -36,9 +43,11 @@
             anim = GetComponent<Animator>();
         }
 
-
         private void FixedUpdate()
         {
+            rangeX = (maxX - minX);
+            rangeY = (maxY - minY);
+
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
             anim.SetBool("Ground", grounded);
@@ -80,6 +89,20 @@
                 anim.SetBool("Ground", false);
                 rigidbody2D.AddForce(new Vector2(0f, jumpForce));
             }
+
+            Vector3 newPosition = transform.position;
+            if (transform.position.x < minX) {
+                newPosition.x += rangeX;
+            } else if (transform.position.x > maxX) {
+                newPosition.x -= rangeX;
+            }
+            if (transform.position.y < minY) {
+                newPosition.y += rangeY;
+            } else if (transform.position.y > maxY) {
+                newPosition.y -= rangeY;
+            }
+
+            transform.position = newPosition;
         }
 
         public void AdjustMove(float move)
