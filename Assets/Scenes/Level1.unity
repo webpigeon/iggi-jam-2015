@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 4407359}
   - 212: {fileID: 4407361}
   - 61: {fileID: 4407360}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - 114: {fileID: 15732938}
   - 114: {fileID: 15732937}
   - 61: {fileID: 15732936}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CharacterRobotBoy
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -168,8 +168,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .25, y: .680000007}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: .758255005, y: .448164701}
+  m_Center: {x: .049041748, y: -.205085278}
 --- !u!114 &15732937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,13 +194,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpForce: 800
+  maxSpeed: 5
+  jumpForce: 600
   crouchSpeed: .25
   airControl: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   doorKey: 0
   minX: -9
   maxX: 9
@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 15732935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: -3, z: 0}
-  m_LocalScale: {x: 1.77153289, y: 1.77153039, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1410818612}
   - {fileID: 171613522}
@@ -299,7 +299,7 @@ GameObject:
   - 4: {fileID: 90550565}
   - 61: {fileID: 90550567}
   - 114: {fileID: 90550566}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: KeyUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 171613522}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -365,7 +365,7 @@ Transform:
   m_PrefabInternal: {fileID: 2076485366}
   m_GameObject: {fileID: 171613521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .360000014, z: 0}
+  m_LocalPosition: {x: .00899999961, y: .023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 15732943}
@@ -380,7 +380,7 @@ GameObject:
   - 4: {fileID: 172589309}
   - 212: {fileID: 172589311}
   - 61: {fileID: 172589310}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - 4: {fileID: 263292982}
   - 61: {fileID: 263292983}
   - 114: {fileID: 263292984}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,6 +529,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b228db7b8b407c4c89dcd1f7f286b42, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b228db7b8b407c4c89dcd1f7f286b42, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b228db7b8b407c4c89dcd1f7f286b42, type: 2}
   m_RootGameObject: {fileID: 1556617528}
@@ -542,7 +550,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 279070431}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +578,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 282858863}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +606,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439341028}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: _StaticLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +635,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 587404143}
   - 212: {fileID: 587404144}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +686,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 591269551}
   - 212: {fileID: 591269552}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,11 +871,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 4463402672366ac4781c208644b0ad95, type: 2}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4463402672366ac4781c208644b0ad95, type: 2}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4463402672366ac4781c208644b0ad95, type: 2}
@@ -1057,7 +1065,7 @@ GameObject:
   - 4: {fileID: 961224238}
   - 212: {fileID: 961224240}
   - 61: {fileID: 961224239}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1125,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 962324172}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1155,7 @@ GameObject:
   - 4: {fileID: 1016269057}
   - 212: {fileID: 1016269056}
   - 61: {fileID: 1016269055}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1216,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1265515610}
   - 114: {fileID: 1265515611}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: _DynamicLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1323,7 +1331,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1401896453}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1351,7 +1359,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1410818612}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -1365,7 +1373,7 @@ Transform:
   m_PrefabInternal: {fileID: 2076485366}
   m_GameObject: {fileID: 1410818611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.603473186, z: 0}
+  m_LocalPosition: {x: 0, y: -.300000012, z: 0}
   m_LocalScale: {x: .564482868, y: .564483702, z: 1}
   m_Children: []
   m_Father: {fileID: 15732943}
@@ -1415,11 +1423,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4463402672366ac4781c208644b0ad95, type: 2}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 4463402672366ac4781c208644b0ad95, type: 2}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4463402672366ac4781c208644b0ad95, type: 2}
@@ -1489,7 +1497,7 @@ GameObject:
   - 4: {fileID: 1484792193}
   - 212: {fileID: 1484792195}
   - 61: {fileID: 1484792194}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1559,7 @@ GameObject:
   - 4: {fileID: 1529503660}
   - 212: {fileID: 1529503659}
   - 61: {fileID: 1529503658}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1614,7 +1622,7 @@ GameObject:
   - 114: {fileID: 1556617531}
   - 61: {fileID: 1556617530}
   - 61: {fileID: 1556617529}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,7 +1741,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1883525694}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1771,7 @@ GameObject:
   - 4: {fileID: 1932600111}
   - 61: {fileID: 1932600110}
   - 114: {fileID: 1932600109}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: KeyLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1816,7 +1824,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1986173894}
   - 212: {fileID: 1986173895}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1897,15 +1905,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: whatIsGround.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 23987d9186e27234fa59b034290f48f1,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_RootGameObject: {fileID: 15732935}
