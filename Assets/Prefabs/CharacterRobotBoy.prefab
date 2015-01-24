@@ -170,21 +170,18 @@ MonoBehaviour:
   airControl: 1
   whatIsGround:
     serializedVersion: 2
-<<<<<<< HEAD
+
     m_Bits: 512
-=======
-    m_Bits: 4294966783
->>>>>>> 0edcb86... Kitties for all!
+
   doorKey: 0
   minX: -9
   maxX: 9
   minY: -5.30000019
   maxY: 5.30000019
-<<<<<<< HEAD
+
   forcePosition: 0
   forcePositionVector: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 0edcb86... Kitties for all!
+
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
