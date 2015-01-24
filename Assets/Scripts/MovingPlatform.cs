@@ -6,6 +6,7 @@ public class MovingPlatform : MonoBehaviour {
 	public int maxUnits;
 	public float currentUnits;
 	public float speed;
+	private PlatformerCharacter2D character;
 
 	// Use this for initialization
 	void Start () {
@@ -26,5 +27,24 @@ public class MovingPlatform : MonoBehaviour {
 
 		currentUnits += speed;
 		transform.Translate (currentUnits * Time.deltaTime, 0, 0);
+
+		if (character != null) {
+			character.AdjustMove(currentUnits * Time.deltaTime);
+		}
+	}
+
+	void OnTriggerEnter2D (Collider2D col)
+	{
+		if (col.gameObject.name == "CharacterRobotBoy") {
+			Debug.Log("Trigger was... er... triggered...");
+			character = col.gameObject.GetComponent<PlatformerCharacter2D>();
+		}
+	}
+
+	void onTriggerExit2D(Collider2D col)
+	{
+		if (col.gameObject.name == "CharacterRobotBoy") {
+			character = null;
+		}
 	}
 }
