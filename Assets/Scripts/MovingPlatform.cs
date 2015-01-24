@@ -2,48 +2,53 @@
 using System.Collections;
 
 public class MovingPlatform : MonoBehaviour {
-	public int minUnits;
-	public int maxUnits;
-	public float currentUnits;
 	public float speed;
-	private PlatformerCharacter2D character;
+	public float displacement;
+	private GameObject character;
+	private Vector3 target;
+	private Vector3 startPos;
+	private Vector3 leftPos;
+	private Vector3 rightPos;
 
 	// Use this for initialization
 	void Start () {
-		this.speed = -0.1f;
-		this.minUnits = -2;
-		this.maxUnits = 2;
+		startPos = transform.position;
+		leftPos = new Vector3 (startPos.x - displacement, startPos.y, 0);
+		rightPos = new Vector3 (startPos.x + displacement, startPos.y, 0);
+		target = leftPos;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (currentUnits < minUnits) {
-			speed = 0.1f;
-		}
 
-		if (currentUnits > maxUnits) {
-			speed = -0.1f;
-		}
+		float speedDelta = speed * Time.deltaTime;
+		transform.position = Vector3.MoveTowards (transform.position, target, speedDelta);
 
-		currentUnits += speed;
-		transform.Translate (currentUnits * Time.deltaTime, 0, 0);
-
-		if (character != null) {
-			character.AdjustMove(currentUnits);
+		float delta = Vector3.Distance(target, transform.position);
+		if (delta == 0) {
+			if (target == leftPos) {
+				target = rightPos;
+			} else {
+				target = leftPos;
+			}
 		}
+	
+		Debug.Log (target);
 	}
 
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.gameObject.name == "CharacterRobotBoy") {
 			Debug.Log("Trigger was... er... triggered...");
-			character = col.gameObject.GetComponent<PlatformerCharacter2D>();
+			character = col.gameObject;
+			character.transform.parent = this.gameObject.transform;
 		}
 	}
 
 	void onTriggerExit2D(Collider2D col)
 	{
 		if (col.gameObject.name == "CharacterRobotBoy") {
+			character.transform.parent = null;
 			character = null;
 		}
 	}
