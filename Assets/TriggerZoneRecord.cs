@@ -6,7 +6,6 @@ public class TriggerZoneRecord : MonoBehaviour {
     public int id = -1;
 
     void OnTriggerEnter2D() {
-        Debug.Log(id);
         lastTrigger = Time.time;
     }
 }

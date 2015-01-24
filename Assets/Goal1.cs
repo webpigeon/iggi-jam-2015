@@ -19,7 +19,6 @@ public class Goal1 : MonoBehaviour {
                 mostRecentTriggerIndex = i;
             }
         }
-        Debug.Log("!!!" + mostRecentTriggerIndex);
         level1Logic.solutions[mostRecentTriggerIndex] = true;
         level1Logic.resetLevel();
     }

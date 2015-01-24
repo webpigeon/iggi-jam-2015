@@ -25,8 +25,14 @@ public class Level1Logic : MonoBehaviour {
 	}
 
     public void resetLevel() {
+        Rigidbody2D rigidbody = player.GetComponent<Rigidbody2D>();
+        rigidbody.isKinematic = true;
+        rigidbody.Sleep();
+        rigidbody.MovePosition(new Vector2(-7.5f, -3f));
         player.transform.position.Set(-7.5f, -3f, 0f);
-        player.GetComponent<Rigidbody2D>().Sleep();
+        rigidbody.isKinematic = false;
+        //rigidbody.WakeUp();
+
         playerScript.Key = false;
 
         triggerZones[0].SetActive(!solutions[0]);
