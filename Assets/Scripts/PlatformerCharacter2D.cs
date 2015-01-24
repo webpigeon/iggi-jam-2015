@@ -26,7 +26,7 @@
         private Transform ceilingCheck; // A position marking where to check for ceilings
         private float ceilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator anim; // Reference to the player's animator component.
-        private bool doorKey = false;
+        public bool doorKey = false;
 
         private void Awake()
         {
@@ -101,7 +101,7 @@
 
         public bool Key
         {
-            get { return true; }
+            get { return doorKey; }
             set { doorKey = value; }
         }
 
