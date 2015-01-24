@@ -111,7 +111,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .159999996
@@ -125,8 +125,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .25, y: .680000007}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: .758255005, y: .448164701}
+  m_Center: {x: .0490417518, y: -.205085307}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -134,7 +134,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
   m_CullingMode: 0
@@ -171,6 +171,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294966783
+  doorKey: 0
+  minX: -9
+  maxX: 9
+  minY: -5.30000019
+  maxY: 5.30000019
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -191,7 +196,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2511236001
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23987d9186e27234fa59b034290f48f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
