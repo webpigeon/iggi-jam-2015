@@ -239,6 +239,9 @@ MonoBehaviour:
   forcePosition: 0
   forcePositionVector: {x: 0, y: 0, z: 0}
   meowSound: {fileID: 8300000, guid: 3db84ba3b8eed714aaf9f6d3f17842ac, type: 3}
+  doorSound: {fileID: 8300000, guid: ebbcee874abe571459bccc94b579d1d1, type: 3}
+  keyCollectSound: {fileID: 8300000, guid: 2e14a6df70bbf7b4e851c205a89ecbd6, type: 3}
+  goalGetSound: {fileID: 8300000, guid: 877b65f5f1e4775438eafc69934fad99, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

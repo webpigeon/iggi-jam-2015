@@ -6,6 +6,7 @@ public class Key : MonoBehaviour {
         PlatformerCharacter2D player = collider.gameObject.GetComponent<PlatformerCharacter2D>();
         if (player != null) {
             player.Key = true;
+			player.playKeySound();
             gameObject.SetActive(false);
         }
     }
