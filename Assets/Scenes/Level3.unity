@@ -1951,8 +1951,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 4759a7e1e5a2ad64fa7b221650f9ec6a, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .75, y: .449999988}
-  m_Center: {x: .0500000007, y: -.200000003}
+  m_Size: {x: .569999993, y: .390928596}
+  m_Center: {x: -.0399999619, y: -.170464277}
 --- !u!114 &1218419686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2544,19 +2544,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Center.x
-      value: .0500000007
+      value: -.0399999619
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Center.y
-      value: -.200000003
+      value: -.170464277
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Size.y
-      value: .449999988
+      value: .390928596
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Size.x
-      value: .75
+      value: .569999993
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: pauseScreen
