@@ -38,12 +38,15 @@ namespace UnitySampleAssets._2D
 										Debug.Log ("quit program");
 										Application.Quit ();
 								}
+							jump = Input.GetButtonDown ("Jump");
+						if (jump) {
+							paused=false;
+							pauseScreen.SetActive (false);
+				}
+								
 						}
         }
-		public void endPause() {
-						paused = false;
-						pauseScreen.SetActive (false);
-				}
+
 
         private void FixedUpdate()
         {
