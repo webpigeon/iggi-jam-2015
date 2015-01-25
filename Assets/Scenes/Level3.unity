@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 1621560119}
   m_GameObject: {fileID: 39445150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .150000006, y: -2, z: 0}
+  m_LocalPosition: {x: .150000006, y: -2.0999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 962165428}
@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -1698,7 +1699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1722,7 +1723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_Layer
@@ -2570,7 +2571,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2594,7 +2595,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_Name
@@ -2920,7 +2921,7 @@ Transform:
   m_PrefabInternal: {fileID: 1195815908}
   m_GameObject: {fileID: 1840414301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .150000006, y: -2, z: 0}
+  m_LocalPosition: {x: .150000006, y: -2.0999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1691185123}
