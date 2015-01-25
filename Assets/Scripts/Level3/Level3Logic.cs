@@ -21,8 +21,6 @@ public class Level3Logic : MonoBehaviour {
 	}
 
     public void resetLevel() {
-        solutions = solutions % 5;
-
         playerScript.forcePositionVector = new Vector3(-8f, -0.5f, 0f);
         playerScript.forcePosition = true;
 		playerScript.Key = false;
@@ -30,10 +28,16 @@ public class Level3Logic : MonoBehaviour {
         movingPlatformStrong.SetActive(solutions != 1);
         movingPlatformWeak.SetActive(solutions == 1);
         door.SetActive(solutions > 2);
+		door.GetComponent<BoxCollider2D> ().enabled = true;
         goalLower.SetActive(solutions != 2);
         goalHigher.SetActive(!goalLower.activeInHierarchy);
         keyHigher.SetActive(solutions == 4);
         keyClimbable.SetActive(solutions == 2 || solutions == 4);
         keyLower.SetActive(!keyClimbable.activeInHierarchy);
+
+		if (solutions == 5) {
+			Application.LoadLevel ("gamewin");
+		}
+
     }
 }

@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
-  pauseScreen: {fileID: 0}
+  pauseScreen: {fileID: 149294, guid: 79eb6d2f1895c47548c77e4e3c3d2fa5, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,6 +242,15 @@ MonoBehaviour:
   doorSound: {fileID: 8300000, guid: ebbcee874abe571459bccc94b579d1d1, type: 3}
   keyCollectSound: {fileID: 8300000, guid: 2e14a6df70bbf7b4e851c205a89ecbd6, type: 3}
   goalGetSound: {fileID: 8300000, guid: 877b65f5f1e4775438eafc69934fad99, type: 3}
+  currentRunFrame: 0
+  idleSprite: {fileID: 21300004, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  jumpingSprite: {fileID: 21300000, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  runningSprites:
+  - {fileID: 21300004, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  - {fileID: 21300006, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  - {fileID: 21300000, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  - {fileID: 21300002, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
+  framesPerSecond: .100000001
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -262,7 +271,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1110258755
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23987d9186e27234fa59b034290f48f1, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 0518e663c79f3eb4280ac17a29367203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

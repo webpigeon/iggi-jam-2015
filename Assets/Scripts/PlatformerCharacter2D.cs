@@ -40,11 +40,21 @@ public class PlatformerCharacter2D : MonoBehaviour
 	public AudioClip goalGetSound;
 	private AudioSource audioSource;
 
+    // Animation frames
+    public int currentRunFrame = 0;
+    public Sprite idleSprite;
+    public Sprite jumpingSprite;
+    public Sprite[] runningSprites;
+    public float framesPerSecond;
+    private float timeTilNextFrame;
+    private SpriteRenderer renderer;
+
     private void Awake() {
         groundCheck = transform.Find("GroundCheck");
         ceilingCheck = transform.Find("CeilingCheck");
         anim = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource> ();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start() {
@@ -70,9 +80,9 @@ public class PlatformerCharacter2D : MonoBehaviour
         if (grounded || airControl) {
             anim.SetFloat("Speed", Mathf.Abs(move));
             rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
-            if (move > 0 && !facingRight)
+            if (move < 0 && !facingRight)
                 Flip();
-            else if (move < 0 && facingRight)
+            else if (move > 0 && facingRight)
                 Flip();
         }
 
@@ -96,6 +106,7 @@ public class PlatformerCharacter2D : MonoBehaviour
         }
 
         transform.position = newPosition;
+        animate();
     }
 
     public void AdjustMove(float move) {
@@ -152,5 +163,23 @@ public class PlatformerCharacter2D : MonoBehaviour
         get { return doorKey; }
         set { doorKey = value; }
     }
-    
+
+    void animate() {
+        if (!grounded) { // Jumping
+            currentRunFrame = 0;
+            timeTilNextFrame = framesPerSecond;
+            renderer.sprite = jumpingSprite;
+        } else if (Mathf.Abs(rigidbody2D.velocity.x) < 0.1f) { // Idle
+            currentRunFrame = 0;
+            timeTilNextFrame = framesPerSecond;
+            renderer.sprite = idleSprite;
+        } else { // Running
+            renderer.sprite = runningSprites[currentRunFrame];
+            timeTilNextFrame -= Time.deltaTime;
+            if (timeTilNextFrame < 0) {
+                currentRunFrame = (currentRunFrame + 1) % runningSprites.Length;
+                timeTilNextFrame = framesPerSecond;
+            }
+        }
+    }
 }
