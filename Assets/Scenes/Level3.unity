@@ -1426,7 +1426,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3023607249
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f506dbd384f3c422caec2a71d8d157a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92bee0442a83cc944a0458b3340ccc42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!68 &962165430
 EdgeCollider2D:
@@ -1708,6 +1708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  pauseScreen: {fileID: 0}
 --- !u!114 &1218419687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,7 +1727,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  grounded: 0
   doorKey: 0
   minX: -9
   maxX: 9
@@ -2468,6 +2468,15 @@ Prefab:
     - target: {fileID: 100002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92bee0442a83cc944a0458b3340ccc42,
+        type: 3}
+    - target: {fileID: 21200000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6100000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
