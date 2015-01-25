@@ -6,6 +6,14 @@ public class MenuPlayGame : MonoBehaviour {
 		Application.LoadLevel ("Level1");
 	}
 
+	public void OnClickCredits(){
+		Application.LoadLevel ("Credits");
+	}
+
+	public void OnBackFromCredits(){
+		Application.LoadLevel ("MainMenu");
+	}
+
 	public void onClickQuit() {
 		Debug.Log ("maple");
 		Application.Quit ();
