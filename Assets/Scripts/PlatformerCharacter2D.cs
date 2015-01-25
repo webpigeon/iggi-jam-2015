@@ -113,24 +113,42 @@ public class PlatformerCharacter2D : MonoBehaviour
         rigidbody2D.velocity = new Vector2(move, rigidbody2D.velocity.y);
     }
 
+	public void playKeySound(){
+		audioSource.PlayOneShot(keyCollectSound, 0.75f);
+	}
+
+	public void playDoorSound(){
+		audioSource.PlayOneShot (doorSound, 0.75f);
+	}
+
 	void OnCollisionEnter2D(Collision2D coll){
-		string collidedWith = coll.gameObject.tag;
-		Debug.Log (collidedWith);
-		switch (collidedWith) {
-		case "key":
-			audioSource.PlayOneShot(keyCollectSound, 0.75f);
-			break;
+		Debug.Log ("Collided: " + coll.gameObject.name);
+	}
+
+	void OnTriggerEnter2D(Collider2D coll){
+		Debug.Log ("Triggered: " + coll.gameObject.name);
+
+		switch(coll.gameObject.name){
 		case "Goal":
 			audioSource.PlayOneShot(goalGetSound, 1.0f);
-			break;
-		case "Door":
-			audioSource.PlayOneShot(doorSound, 0.75f);
-			break;
-		default:
-			audioSource.PlayOneShot (meowSound, 0.75f);
+			Debug.Log("Goal by Switch");
 			break;
 		}
-
+		/*
+		if (coll.gameObject.GetComponent<Door> () != null) {
+			audioSource.PlayOneShot (doorSound, 0.75f);
+		} else if (coll.gameObject.GetComponent<Key> () != null) {
+			audioSource.PlayOneShot(keyCollectSound, 0.75f);
+		} else if (coll.gameObject.GetComponent<Goal1> () != null) {
+			audioSource.PlayOneShot(goalGetSound, 1.0f);
+		}else if (coll.gameObject.GetComponent<Goal2> () != null) {
+			audioSource.PlayOneShot(goalGetSound, 1.0f);
+		}else if (coll.gameObject.GetComponent<Goal3> () != null) {
+			audioSource.PlayOneShot(goalGetSound, 1.0f);
+		} else {
+			audioSource.PlayOneShot (meowSound, 0.75f);
+		}
+		*/
 	}
 
 

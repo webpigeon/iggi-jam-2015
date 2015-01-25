@@ -15,6 +15,7 @@ public class Door : MonoBehaviour {
             foreach (BoxCollider2D col in colliders) {
                 col.enabled = false;
             }
+			player.playDoorSound();
             // TODO: We should also animate. Instead we just destroy the object to be lazy.
             gameObject.SetActive(false);
         }
