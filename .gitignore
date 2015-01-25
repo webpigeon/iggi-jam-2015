@@ -66,5 +66,5 @@ sysinfo.txt
 Temp/UnityLockfile
 
 # Unity3D output directories
-out_Data/*
-out.exe
+*_Data/
+*.exe
