@@ -25,6 +25,7 @@ public class Level3Logic : MonoBehaviour {
 
         playerScript.forcePositionVector = new Vector3(-8f, -0.5f, 0f);
         playerScript.forcePosition = true;
+		playerScript.Key = false;
 
         movingPlatformStrong.SetActive(solutions != 1);
         movingPlatformWeak.SetActive(solutions == 1);

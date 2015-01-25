@@ -22,6 +22,7 @@ public class Level2Logic : MonoBehaviour {
     public void resetLevel() {
         playerScript.forcePositionVector = new Vector3(-7.5f, -3f, 0f);
         playerScript.forcePosition = true;
+		playerScript.Key = false;
 
         triggerZones[0].SetActive(!solutions[0]);
         triggerZones[1].SetActive(solutions[0] && !solutions[1]);
