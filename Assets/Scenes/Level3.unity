@@ -140,6 +140,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 77976241}
   - 212: {fileID: 77976242}
+  - 61: {fileID: 77976243}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -182,6 +183,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cbee0cf3ec9bc4b829cc53ca788e12c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &77976243
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77976240}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .663999975, y: 3.5999999}
+  m_Center: {x: 0, y: .439999998}
 --- !u!1 &109787782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,7 +2512,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 9b228db7b8b407c4c89dcd1f7f286b42, type: 2}
   m_RootGameObject: {fileID: 2055147066}
   m_IsPrefabParent: 0
@@ -3065,7 +3078,6 @@ GameObject:
   - 4: {fileID: 2055147067}
   - 114: {fileID: 2055147070}
   - 61: {fileID: 2055147069}
-  - 61: {fileID: 2055147068}
   m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
@@ -3086,18 +3098,6 @@ Transform:
   - {fileID: 77976241}
   m_Father: {fileID: 886328427}
   m_RootOrder: 7
---- !u!61 &2055147068
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100002, guid: 9b228db7b8b407c4c89dcd1f7f286b42,
-    type: 2}
-  m_PrefabInternal: {fileID: 1537731709}
-  m_GameObject: {fileID: 2055147066}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .615402699, y: 2.68648577}
-  m_Center: {x: -.0728372931, y: -1.20701838}
 --- !u!61 &2055147069
 BoxCollider2D:
   m_ObjectHideFlags: 0
