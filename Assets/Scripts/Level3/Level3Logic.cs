@@ -23,7 +23,7 @@ public class Level3Logic : MonoBehaviour {
     public void resetLevel() {
         solutions = solutions % 5;
 
-        playerScript.forcePositionVector = new Vector3(-8.5f, -0.5f, 0f);
+        playerScript.forcePositionVector = new Vector3(-8f, -0.5f, 0f);
         playerScript.forcePosition = true;
 
         movingPlatformStrong.SetActive(solutions != 1);
