@@ -35,6 +35,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 	// Sound Effects
 	[SerializeField]
 	public AudioClip meowSound;
+	public AudioClip doorSound;
+	public AudioClip keyCollectSound;
+	public AudioClip goalGetSound;
 	private AudioSource audioSource;
 
     private void Awake() {
