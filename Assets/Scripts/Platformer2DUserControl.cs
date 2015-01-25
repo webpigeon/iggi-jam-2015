@@ -9,25 +9,41 @@ namespace UnitySampleAssets._2D
         private PlatformerCharacter2D character;
         private bool jump;
 		public bool paused;
+		public GameObject pauseScreen;
 
         private void Awake()
         {
             character = GetComponent<PlatformerCharacter2D>();
 			paused = false;
+			pauseScreen.SetActive (false);
         }
 
         private void Update()
         {
             if (!paused) {
-					if (!jump)
+								if (!jump)
             		// Read the jump input in Update so button presses aren't missed.
-					jump = Input.GetButtonDown ("Jump");
+										jump = Input.GetButtonDown ("Jump");
 
-					if (Input.GetKeyDown (KeyCode.Escape)) {
+								if (Input.GetKeyDown (KeyCode.Escape)) {
+										pauseScreen.SetActive (true);
+										paused = true;
 										Debug.Log ("Escape is pressed");
-					}
-				}
+								}
+					
+								
+						} else {
+								if (Input.GetKeyDown (KeyCode.Q)) {
+										// quit from Unity
+										Debug.Log ("quit program");
+										Application.Quit ();
+								}
+						}
         }
+		public void endPause() {
+						paused = false;
+						pauseScreen.SetActive (false);
+				}
 
         private void FixedUpdate()
         {
