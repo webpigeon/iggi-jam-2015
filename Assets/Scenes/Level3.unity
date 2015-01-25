@@ -1071,6 +1071,31 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 942f64bac24c74898ab8d166a9a5c45b,
+        type: 3}
+    - target: {fileID: 400002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.07000017
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.50999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.46000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .445000082
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6100002, guid: 581287223658bb3419adc508f769c3d1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 581287223658bb3419adc508f769c3d1, type: 2}
@@ -1667,7 +1692,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3023607249
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f506dbd384f3c422caec2a71d8d157a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 942f64bac24c74898ab8d166a9a5c45b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1138422912
 Transform:
@@ -1676,8 +1701,8 @@ Transform:
   m_PrefabInternal: {fileID: 551304967}
   m_GameObject: {fileID: 1138422910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.5, y: -.5, z: 0}
-  m_LocalScale: {x: .400000006, y: .400000006, z: 1}
+  m_LocalPosition: {x: -.50999999, y: -1.46000004, z: 0}
+  m_LocalScale: {x: .445000082, y: 1.07000017, z: 1}
   m_Children: []
   m_Father: {fileID: 411522131}
   m_RootOrder: 0
@@ -1691,13 +1716,21 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Points:
-  - {x: -1.74999952, y: 1.04905725}
-  - {x: -1.52482033, y: -.281840563}
-  - {x: -.944569111, y: -.99235177}
-  - {x: .85316062, y: -1.00478768}
-  - {x: 1.55791283, y: -.192192793}
-  - {x: 1.74157858, y: 1.04454041}
-  - {x: -1.75158262, y: 1.06323421}
+  - {x: -1.20359099, y: .988188028}
+  - {x: -.761174798, y: .860803485}
+  - {x: -.78326571, y: -.318362057}
+  - {x: -.768938363, y: -1.00452602}
+  - {x: .814132929, y: -1.00478756}
+  - {x: .816357434, y: -.253061891}
+  - {x: .796912432, y: .828487098}
+  - {x: 1.17221868, y: .972773314}
+  - {x: .919974267, y: 1.15036285}
+  - {x: 1.55472994, y: 1.1901176}
+  - {x: 1.58546329, y: 1.3123647}
+  - {x: -1.57594979, y: 1.32936561}
+  - {x: -1.56774533, y: 1.22347534}
+  - {x: -.875642717, y: 1.17843628}
+  - {x: -1.20517254, y: .99019146}
 --- !u!1001 &1195815908
 Prefab:
   m_ObjectHideFlags: 0
