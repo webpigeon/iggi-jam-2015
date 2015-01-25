@@ -103,7 +103,23 @@ public class PlatformerCharacter2D : MonoBehaviour
     }
 
 	void OnCollisionEnter2D(Collision2D coll){
-		audioSource.PlayOneShot (meowSound, 0.75f);
+		string collidedWith = coll.gameObject.tag;
+		Debug.Log (collidedWith);
+		switch (collidedWith) {
+		case "key":
+			audioSource.PlayOneShot(keyCollectSound, 0.75f);
+			break;
+		case "Goal":
+			audioSource.PlayOneShot(goalGetSound, 1.0f);
+			break;
+		case "Door":
+			audioSource.PlayOneShot(doorSound, 0.75f);
+			break;
+		default:
+			audioSource.PlayOneShot (meowSound, 0.75f);
+			break;
+		}
+
 	}
 
 
