@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 386184138}
   - 58: {fileID: 386184140}
+  - 114: {fileID: 386184139}
   m_Layer: 8
   m_Name: Goal
   m_TagString: Untagged
@@ -590,6 +591,23 @@ Transform:
   - {fileID: 1603925073}
   m_Father: {fileID: 1265515610}
   m_RootOrder: 7
+--- !u!114 &386184139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 386184137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d02e32e013eb44ca4446e62a76d8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerZones:
+  - {fileID: 1468036662}
+  - {fileID: 651198622}
+  - {fileID: 1324388598}
+  - {fileID: 948447796}
+  - {fileID: 1827523285}
 --- !u!58 &386184140
 CircleCollider2D:
   m_ObjectHideFlags: 0
