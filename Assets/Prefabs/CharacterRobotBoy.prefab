@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -3, z: 0}
+  m_LocalPosition: {x: -8.01000023, y: -.579999983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -123,10 +123,10 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4759a7e1e5a2ad64fa7b221650f9ec6a, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .758255005, y: .448164701}
-  m_Center: {x: .049041748, y: -.205085278}
+  m_Size: {x: .569999993, y: .449999988}
+  m_Center: {x: -.0399999991, y: -.200000003}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -172,6 +172,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  groundedRadius: .200000003
+  grounded: 0
   doorKey: 0
   minX: -9
   maxX: 9
@@ -197,7 +199,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 3023607249
+  m_SortingLayerID: 1110258755
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 23987d9186e27234fa59b034290f48f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
